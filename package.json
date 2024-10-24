@@ -1,0 +1,29 @@
+{
+  "name": "@astraw/indijs",
+  "version": "0.0.1",
+  "author": "Anthony Hinsinger <anthony.hinsinger@gmail.com>",
+  "license": "ISC",
+  "description": "INDI nodejs wrapper",
+  "main": "dist/binding.js",
+  "types": "dist/binding.d.ts",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "node-addon-api": "^4.3.0"
+  },
+  "scripts": {
+    "pretest": "tsc",
+    "prepare": "tsc",
+    "test": "node --napi-modules ./test/test_binding.js",
+    "prebuild": "node-gyp configure",
+    "build": "tsc && node-gyp build"
+  },
+  "gypfile": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AST-RAW/indijs"
+  },
+  "devDependencies": {
+    "@types/node": "^14.18.33",
+    "typescript": "^4.8.4"
+  }
+}
